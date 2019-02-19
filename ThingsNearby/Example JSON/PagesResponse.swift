@@ -1,0 +1,289 @@
+//
+//  pagesResponseJSON.swift
+//  ThingsNearbyTests
+//
+//  Created by Simon Haycock on 2/4/19.
+//  Copyright © 2019 Expedia. All rights reserved.
+//
+
+import Foundation
+
+struct PagesResponse {
+    static let json = """
+{
+   "pages":[
+      {
+         "pageid":17867,
+         "ns":0,
+         "title":"London",
+         "index":0,
+         "coordinates":[
+            {
+               "lat":51.50722222,
+               "lon":-0.1275,
+               "primary":true,
+               "globe":"earth"
+            }
+         ],
+         "thumbnail":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/London_Montage_L.jpg/33px-London_Montage_L.jpg",
+            "width":33,
+            "height":50
+         },
+         "original":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/c/cd/London_Montage_L.jpg",
+            "width":1200,
+            "height":1809
+         },
+         "terms":{
+            "description":[
+               "capital and largest city of the United Kingdom"
+            ]
+         }
+      },
+      {
+         "pageid":53113,
+         "ns":0,
+         "title":"Charing Cross",
+         "index":1,
+         "coordinates":[
+            {
+               "lat":51.5073,
+               "lon":-0.12755,
+               "primary":true,
+               "globe":"earth"
+            }
+         ],
+         "thumbnail":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Westminster%2C_Charing_Cross_-_geograph.org.uk_-_865507.jpg/50px-Westminster%2C_Charing_Cross_-_geograph.org.uk_-_865507.jpg",
+            "width":50,
+            "height":38
+         },
+         "original":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/7/7c/Westminster%2C_Charing_Cross_-_geograph.org.uk_-_865507.jpg",
+            "width":640,
+            "height":480
+         },
+         "terms":{
+            "description":[
+               "area of London, England"
+            ]
+         }
+      },
+      {
+         "pageid":210610,
+         "ns":0,
+         "title":"Nelson's Column",
+         "index":2,
+         "coordinates":[
+            {
+               "lat":51.50772222,
+               "lon":-0.12797222,
+               "primary":true,
+               "globe":"earth"
+            }
+         ],
+         "thumbnail":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Nelson%27s_Column%2C_Trafalgar_Square%2C_London.JPG/34px-Nelson%27s_Column%2C_Trafalgar_Square%2C_London.JPG",
+            "width":34,
+            "height":50
+         },
+         "original":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/6/6d/Nelson%27s_Column%2C_Trafalgar_Square%2C_London.JPG",
+            "width":1805,
+            "height":2621
+         },
+         "terms":{
+            "description":[
+               "victory column in London"
+            ]
+         }
+      },
+      {
+         "pageid":367460,
+         "ns":0,
+         "title":"London commuter belt",
+         "index":3,
+         "coordinates":[
+            {
+               "lat":51.5073,
+               "lon":-0.1277,
+               "primary":true,
+               "globe":"earth"
+            }
+         ],
+         "thumbnail":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/London_Commuter_Belt_map_no_TTW.svg/50px-London_Commuter_Belt_map_no_TTW.svg.png",
+            "width":50,
+            "height":37
+         },
+         "original":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/1/1f/London_Commuter_Belt_map_no_TTW.svg",
+            "width":1000,
+            "height":739
+         },
+         "terms":{
+            "description":[
+               "human settlement in United Kingdom"
+            ]
+         }
+      },
+      {
+         "pageid":540411,
+         "ns":0,
+         "title":"Social Market Foundation",
+         "index":4,
+         "coordinates":[
+            {
+               "lat":51.5073509,
+               "lon":-0.1277583,
+               "primary":true,
+               "globe":"earth"
+            }
+         ],
+         "terms":{
+            "description":[
+               "organization"
+            ]
+         }
+      },
+      {
+         "pageid":4347521,
+         "ns":0,
+         "title":"Greater London Built-up Area",
+         "index":5,
+         "coordinates":[
+            {
+               "lat":51.5073,
+               "lon":-0.1277,
+               "primary":true,
+               "globe":"earth"
+            }
+         ],
+         "thumbnail":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Labelled_Greater_London_Built-up_Area.png/50px-Labelled_Greater_London_Built-up_Area.png",
+            "width":50,
+            "height":50
+         },
+         "original":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/3/35/Labelled_Greater_London_Built-up_Area.png",
+            "width":1000,
+            "height":1000
+         },
+         "terms":{
+            "description":[
+               "conurbation in south-east England"
+            ]
+         }
+      },
+      {
+         "pageid":12029460,
+         "ns":0,
+         "title":"High Commission of Uganda, London",
+         "index":6,
+         "coordinates":[
+            {
+               "lat":51.5072,
+               "lon":-0.1283,
+               "primary":true,
+               "globe":"earth"
+            }
+         ],
+         "thumbnail":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Uganda_House_London.JPG/50px-Uganda_House_London.JPG",
+            "width":50,
+            "height":38
+         },
+         "original":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/8/87/Uganda_House_London.JPG",
+            "width":3264,
+            "height":2448
+         }
+      },
+      {
+         "pageid":20915928,
+         "ns":0,
+         "title":"Farmers Club",
+         "index":7,
+         "coordinates":[
+            {
+               "lat":51.50712222,
+               "lon":-0.12719167,
+               "primary":true,
+               "globe":"earth"
+            }
+         ],
+         "thumbnail":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Londres_195..jpg/37px-Londres_195..jpg",
+            "width":37,
+            "height":50
+         },
+         "original":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/4/46/Londres_195..jpg",
+            "width":692,
+            "height":922
+         },
+         "terms":{
+            "description":[
+               "London gentlemen's club based at Whitehall Court"
+            ]
+         }
+      },
+      {
+         "pageid":33109245,
+         "ns":0,
+         "title":"Equestrian statue of Charles I, Charing Cross",
+         "index":8,
+         "coordinates":[
+            {
+               "lat":51.507335,
+               "lon":-0.127655,
+               "primary":true,
+               "globe":"earth"
+            }
+         ],
+         "thumbnail":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Charles_I%2C_Trafalgar_Square.jpg/33px-Charles_I%2C_Trafalgar_Square.jpg",
+            "width":33,
+            "height":50
+         },
+         "original":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/3/36/Charles_I%2C_Trafalgar_Square.jpg",
+            "width":1866,
+            "height":2800
+         },
+         "terms":{
+            "description":[
+               "statue in Charing Cross, London, England"
+            ]
+         }
+      },
+      {
+         "pageid":40954625,
+         "ns":0,
+         "title":"Embassy of Burundi, London",
+         "index":9,
+         "coordinates":[
+            {
+               "lat":51.5072,
+               "lon":-0.1283,
+               "primary":true,
+               "globe":"earth"
+            }
+         ],
+         "thumbnail":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Uganda_House_London.JPG/50px-Uganda_House_London.JPG",
+            "width":50,
+            "height":38
+         },
+         "original":{
+            "source":"https://upload.wikimedia.org/wikipedia/commons/8/87/Uganda_House_London.JPG",
+            "width":3264,
+            "height":2448
+         }
+      }
+   ]
+}
+"""
+}
+
