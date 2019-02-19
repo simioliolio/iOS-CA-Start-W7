@@ -59,6 +59,10 @@ class ThingsViewController: UITableViewController {
         
         cell.textLabel?.text = page.title
         
+        if let detailText = page.terms?.description?.first {
+            cell.detailTextLabel?.text = detailText
+        }
+        
         if let thumbnail = page.thumbnail?.source {
             cell.imageView?.downloaded(from: thumbnail, contentMode: .scaleAspectFit, completion: {
                 cell.setNeedsLayout()
