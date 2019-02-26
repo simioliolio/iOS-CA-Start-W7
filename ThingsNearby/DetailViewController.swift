@@ -7,16 +7,32 @@
 //
 
 import UIKit
+import SafariServices
 
 class DetailViewController: UIViewController {
-
+    
+    var page: Page?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        print("view did load, with page id \(String(describing: page?.pageid))")
+
     }
     
-
+    @IBAction func openArticle(_ sender: Any) {
+        
+        // Show web view with image for now
+        
+        guard let imageURL = page?.original?.source else { return }
+        
+        let url = URL(string: imageURL)!
+        
+        let webViewController = SFSafariViewController(url: url)
+        present(webViewController, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

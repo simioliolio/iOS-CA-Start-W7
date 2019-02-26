@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="twQ-Ev-X3E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yUx-Cp-uft">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,36 +33,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72A-PR-x0K">
-                                <rect key="frame" x="16" y="28" width="390" height="36"/>
+                                <rect key="frame" x="16" y="72" width="390" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BuN-F8-472">
-                                <rect key="frame" x="16" y="80" width="382" height="177"/>
+                                <rect key="frame" x="16" y="124" width="382" height="177"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BuN-F8-472" secondAttribute="height" multiplier="343:159" id="UIX-pH-jDn"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visited" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1R-AQ-7eQ">
-                                <rect key="frame" x="20" y="278.33333333333331" width="317" height="20.333333333333314"/>
+                                <rect key="frame" x="20" y="322.33333333333331" width="317" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcM-75-rKH">
-                                <rect key="frame" x="345" y="273" width="51" height="31"/>
+                                <rect key="frame" x="345" y="317" width="51" height="31"/>
                             </switch>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UKh-Tg-jec">
-                                <rect key="frame" x="16" y="320" width="382" height="140"/>
+                                <rect key="frame" x="16" y="364" width="382" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UKh-Tg-jec" secondAttribute="height" multiplier="191:70" id="thh-Co-vP4"/>
                                 </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Soy-My-5bd">
-                                <rect key="frame" x="164" y="476" width="86" height="30"/>
+                                <rect key="frame" x="164" y="520" width="86" height="30"/>
                                 <state key="normal" title="Open Article"/>
+                                <connections>
+                                    <action selector="openArticle:" destination="j0i-3Z-RFV" eventType="touchUpInside" id="zJw-bo-7tI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,15 +89,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AYS-La-1Tw"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="72A-PR-x0K" id="UYP-d0-E09"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mn4-kR-YZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759.4202898550725" y="105.97826086956522"/>
+            <point key="canvasLocation" x="5338" y="108"/>
         </scene>
-        <!--Things View Controller-->
+        <!--Things Nearby-->
         <scene sceneID="7sM-33-ocm">
             <objects>
-                <tableViewController id="twQ-Ev-X3E" customClass="ThingsViewController" customModule="ThingsNearby" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Things Nearby" id="twQ-Ev-X3E" customClass="ThingsViewController" customModule="ThingsNearby" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C2a-34-cNt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,6 +129,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="j0i-3Z-RFV" kind="show" id="e4X-Qu-58R"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -131,10 +140,29 @@
                             <outlet property="delegate" destination="twQ-Ev-X3E" id="aR7-Hq-d5k"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Things Nearby" id="oKi-Bn-Zfc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Hj-sB-T3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2746" y="102"/>
+            <point key="canvasLocation" x="4547.826086956522" y="107.60869565217392"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fAv-8j-bxl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yUx-Cp-uft" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5XJ-a1-JmJ">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="twQ-Ev-X3E" kind="relationship" relationship="rootViewController" id="nZm-4E-XhM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fly-1f-8YZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3640.579710144928" y="107.60869565217392"/>
         </scene>
     </scenes>
 </document>
