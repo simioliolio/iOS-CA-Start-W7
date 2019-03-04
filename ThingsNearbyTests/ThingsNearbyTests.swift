@@ -21,8 +21,8 @@ class ThingsNearbyTests: XCTestCase {
 
     func test_pagesInTitleOrder_pagesAreSortedCorrectly() {
 //        let eiffelTower = Page(pageid: 1, title: "The Eiffel Tower", thumbnail: nil)
-        let eiffelTower = Page(pageid: 1, title: "The Eiffel Tower", thumbnail: nil, original: nil, coordinates: [], terms: nil)
-        let londonBridge = Page(pageid: 2, title: "London Bridge", thumbnail: nil, original: nil, coordinates: [], terms: nil)
+        let eiffelTower = Page(pageid: 1, title: "The Eiffel Tower", thumbnail: nil, original: nil, coordinates: [], terms: nil, fullurl: "http://someurl")
+        let londonBridge = Page(pageid: 2, title: "London Bridge", thumbnail: nil, original: nil, coordinates: [], terms: nil, fullurl: "http://someurl")
         let pages = Pages(pages: [eiffelTower, londonBridge])
         let sortedPages = pages.pagesInTitleOrder()
         XCTAssertEqual(sortedPages.pages[0].title, londonBridge.title, "pages not sorted correctly")
@@ -72,6 +72,19 @@ class ThingsNearbyTests: XCTestCase {
         // we just want to make sure the decode is possible.
         
         // Test passes, nothing left to assert!
+    }
+    
+    func test_decodeWholeJSON_decodeSuccessfully() {
+        
+        guard let jsonInput = GeoQueryResponse.json.data(using: .utf8) else {
+            XCTFail("cannot get data from response string")
+            return
+        }
+        
+        guard let _ = try? JSONDecoder().decode(GeoQuery.self, from: jsonInput) else {
+            XCTFail("Could not decode json")
+            return
+        }
     }
 
 }

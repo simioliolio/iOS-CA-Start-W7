@@ -14,6 +14,9 @@
 		12BD18EF2209C3A30022A293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12BD18EE2209C3A30022A293 /* Assets.xcassets */; };
 		12BD18F22209C3A30022A293 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12BD18F02209C3A30022A293 /* LaunchScreen.storyboard */; };
 		12BD18FD2209C3A30022A293 /* ThingsNearbyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BD18FC2209C3A30022A293 /* ThingsNearbyTests.swift */; };
+		12CCBD47222D8D7600D04331 /* GeoQueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CCBD46222D8D7600D04331 /* GeoQueryResponse.swift */; };
+		12CCBD4A222D957B00D04331 /* MediaWiki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CCBD49222D905A00D04331 /* MediaWiki.swift */; };
+		12CCBD4F222DA3E500D04331 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CCBD4E222DA3E500D04331 /* Location.swift */; };
 		12D73D4E220AFB1C00F32E93 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D73D4D220AFB1C00F32E93 /* Models.swift */; };
 		12FBDBE4221C3B480079E7CB /* ThingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FBDBE3221C3B480079E7CB /* ThingsViewController.swift */; };
 		12FBDBE6221C41900079E7CB /* UIImageView+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FBDBE5221C41900079E7CB /* UIImageView+Networking.swift */; };
@@ -44,6 +47,9 @@
 		12BD18FC2209C3A30022A293 /* ThingsNearbyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsNearbyTests.swift; sourceTree = "<group>"; };
 		12BD18FE2209C3A30022A293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12BD19072209CAA00022A293 /* PageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageResponse.swift; sourceTree = "<group>"; };
+		12CCBD46222D8D7600D04331 /* GeoQueryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoQueryResponse.swift; sourceTree = "<group>"; };
+		12CCBD49222D905A00D04331 /* MediaWiki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaWiki.swift; sourceTree = "<group>"; };
+		12CCBD4E222DA3E500D04331 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		12D73D4B220AF9BD00F32E93 /* PagesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesResponse.swift; sourceTree = "<group>"; };
 		12D73D4D220AFB1C00F32E93 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		12FBDBE3221C3B480079E7CB /* ThingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 		12BD18E62209C3A20022A293 /* ThingsNearby */ = {
 			isa = PBXGroup;
 			children = (
+				12CCBD4B222DA3CD00D04331 /* Location */,
+				12CCBD48222D905200D04331 /* Networking */,
 				12FBDBE8221C5FA70079E7CB /* Example JSON */,
 				12D73D4D220AFB1C00F32E93 /* Models.swift */,
 				12BD18E72209C3A20022A293 /* AppDelegate.swift */,
@@ -113,11 +121,28 @@
 			path = ThingsNearbyTests;
 			sourceTree = "<group>";
 		};
+		12CCBD48222D905200D04331 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				12CCBD49222D905A00D04331 /* MediaWiki.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		12CCBD4B222DA3CD00D04331 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				12CCBD4E222DA3E500D04331 /* Location.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		12FBDBE8221C5FA70079E7CB /* Example JSON */ = {
 			isa = PBXGroup;
 			children = (
 				12BD19072209CAA00022A293 /* PageResponse.swift */,
 				12D73D4B220AF9BD00F32E93 /* PagesResponse.swift */,
+				12CCBD46222D8D7600D04331 /* GeoQueryResponse.swift */,
 			);
 			path = "Example JSON";
 			sourceTree = "<group>";
@@ -224,12 +249,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				12D73D4E220AFB1C00F32E93 /* Models.swift in Sources */,
+				12CCBD4F222DA3E500D04331 /* Location.swift in Sources */,
 				12BD18EA2209C3A20022A293 /* ViewController.swift in Sources */,
+				12CCBD47222D8D7600D04331 /* GeoQueryResponse.swift in Sources */,
 				12FBDBE9221C61280079E7CB /* PagesResponse.swift in Sources */,
 				12FBDBE6221C41900079E7CB /* UIImageView+Networking.swift in Sources */,
 				12BD18E82209C3A20022A293 /* AppDelegate.swift in Sources */,
 				12FBDBE4221C3B480079E7CB /* ThingsViewController.swift in Sources */,
 				1290F11122130041004F1486 /* DetailViewController.swift in Sources */,
+				12CCBD4A222D957B00D04331 /* MediaWiki.swift in Sources */,
 				12FBDBEA221C612B0079E7CB /* PageResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

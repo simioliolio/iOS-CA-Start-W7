@@ -35,6 +35,7 @@ struct Page: Decodable {
     let original: PageImage?
     let coordinates: [Coordinate]
     let terms: Terms?
+    let fullurl: String
 }
 
 struct Pages: Decodable {
@@ -49,4 +50,8 @@ struct Pages: Decodable {
         }
         return Pages(pages: sortedPages)
     }
+}
+
+struct GeoQuery: Decodable {
+    let query: Pages
 }

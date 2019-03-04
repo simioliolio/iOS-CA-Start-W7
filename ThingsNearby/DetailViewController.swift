@@ -8,16 +8,29 @@
 
 import UIKit
 import SafariServices
+import MapKit
 
 class DetailViewController: UIViewController {
     
     var page: Page?
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
 //        print("view did load, with page id \(String(describing: page?.pageid))")
+        
+        guard let page = self.page else { fatalError("no page set on detail view controller") }
+        
+        titleLabel.text = page.title
+        
+        if let imageURL = page.original?.source {
+            imageView.downloaded(from: imageURL) {
+                self.imageView.backgroundColor = .clear
+            }
+        }
 
     }
     

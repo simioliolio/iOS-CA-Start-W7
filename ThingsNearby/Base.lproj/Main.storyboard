@@ -90,7 +90,8 @@
                         <viewLayoutGuide key="safeArea" id="AYS-La-1Tw"/>
                     </view>
                     <connections>
-                        <outlet property="titleLabel" destination="72A-PR-x0K" id="UYP-d0-E09"/>
+                        <outlet property="imageView" destination="BuN-F8-472" id="37R-Jn-ou1"/>
+                        <outlet property="titleLabel" destination="72A-PR-x0K" id="C88-RY-OKF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mn4-kR-YZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
