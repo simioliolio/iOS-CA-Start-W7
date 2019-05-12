@@ -30,6 +30,7 @@ class DetailViewController: UIViewController {
         let url = URL(string: imageURL)!
         
         let webViewController = SFSafariViewController(url: url)
+        webViewController.modalPresentationStyle = .overFullScreen
         present(webViewController, animated: true, completion: nil)
     }
     
