@@ -39,14 +39,4 @@ struct Page: Decodable {
 
 struct Pages: Decodable {
     let pages: [Page]
-    func pagesInTitleOrder() -> Pages {
-        let sortedPages = pages.sorted { (first: Page, second: Page) -> Bool in
-            if first.title < second.title {
-                return true
-            } else {
-                return false
-            }
-        }
-        return Pages(pages: sortedPages)
-    }
 }

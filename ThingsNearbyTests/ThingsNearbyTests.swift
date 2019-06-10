@@ -18,15 +18,6 @@ class ThingsNearbyTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func test_pagesInTitleOrder_pagesAreSortedCorrectly() {
-//        let eiffelTower = Page(pageid: 1, title: "The Eiffel Tower", thumbnail: nil)
-        let eiffelTower = Page(pageid: 1, title: "The Eiffel Tower", thumbnail: nil, original: nil, coordinates: [], terms: nil)
-        let londonBridge = Page(pageid: 2, title: "London Bridge", thumbnail: nil, original: nil, coordinates: [], terms: nil)
-        let pages = Pages(pages: [eiffelTower, londonBridge])
-        let sortedPages = pages.pagesInTitleOrder()
-        XCTAssertEqual(sortedPages.pages[0].title, londonBridge.title, "pages not sorted correctly")
-    }
     
     func test_decodePageJSON_decodeSuccessfully() {
         
