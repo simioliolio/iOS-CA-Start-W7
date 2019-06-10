@@ -40,3 +40,7 @@ struct Page: Decodable {
 struct Pages: Decodable {
     let pages: [Page]
 }
+
+struct GeoQuery: Decodable {
+    let query: Pages
+}
